@@ -1,2 +1,4 @@
 kivy
 deep-translator
+requests
+certifi
