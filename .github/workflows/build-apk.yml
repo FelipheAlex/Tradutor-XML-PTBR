@@ -5,17 +5,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
+      - name: Build APK
+        uses: Digreatbrian/buildozer-action@v2
         with:
-          command: buildozer android debug
+          workdir: .
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Tradutor-XML-APK
+          name: TradutorXML
           path: bin/*.apk
